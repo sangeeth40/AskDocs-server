@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 from routes import users
-
+from routes import projects
 load_dotenv()
 
 app = FastAPI(
@@ -25,7 +25,7 @@ app.add_middleware(
 # Health check endpoints
 @app.get("/")
 async def root():
-    return {"message": "Six-Figure AI Engineering app is running!"}
+    return {"message": "AskDocs Backend server running!"}
 
 @app.get("/health")
 async def health_check():
@@ -35,6 +35,7 @@ async def health_check():
     }
 
 app.include_router(users.router)
+app.include_router(projects.router)
 
 
 if __name__ == "__main__":
