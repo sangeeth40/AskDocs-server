@@ -146,7 +146,7 @@ User Query → Retrieval → Context → LLM → Streaming Response
 
 | Layer       | Technology                       |
 | ----------- | -------------------------------- |
-| Backend API | FastAPI / Node.js                |
+| Backend API | FastAPI                          |
 | Queue       | Redis                            |
 | Workers     | Celery                           |
 | Storage     | AWS S3                           |
